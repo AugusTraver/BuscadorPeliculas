@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+
+body {
+  background-color: #050505; /* Negro profundo */
+  color: #e5e5e5;
+  font-family: 'Outfit', sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* ESTILO CORREGIDO Y PROFESIONAL DEL TÍTULO */
+.app-title {
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 50px;
+  background: linear-gradient(135deg, #ffffff 0%, #71717a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 10px 30px rgba(255,255,255,0.05);
+  
+  /* ESTO EVITA QUE SE REBANE EL TEXTO POR ARRIBA Y ABAJO */
+  line-height: 1.4;
+  padding: 10px 0;
+}
+
+/* AJUSTE RESPONSIVO PARA PANTALLAS PEQUEÑAS (Móviles) */
+/* Cuando la pantalla sea de menos de 768px, aplicamos estos cambios */
+@media (max-width: 768px) {
+  .app-title {
+    font-size: 2.8rem; /* Reducimos el tamaño en móviles para que no ocupe tanto espacio vertical */
+    letter-spacing: -1px; /* Ajustamos el interletraje */
+    margin-bottom: 30px;
+  }
+}

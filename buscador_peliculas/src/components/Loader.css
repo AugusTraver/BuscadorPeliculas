@@ -1,0 +1,16 @@
+.loader {
+  text-align: center;
+  padding: 60px;
+  font-size: 1.3rem;
+  color: #facc15;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.4; }
+  50% { opacity: 1; }
+  100% { opacity: 0.4; }
+}

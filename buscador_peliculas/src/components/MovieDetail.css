@@ -1,0 +1,83 @@
+.detail-container {
+  margin-top: 20px;
+  animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.back-button {
+  margin-bottom: 30px;
+  padding: 12px 28px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #fff;
+  color: #000;
+  transform: translateX(-5px); /* Se mueve un poquito a la izquierda */
+}
+
+.detail-content {
+  display: flex;
+  gap: 50px;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(20px);
+  padding: 50px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+  flex-wrap: wrap;
+}
+
+.detail-poster {
+  max-width: 350px;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  object-fit: cover;
+}
+
+.detail-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.detail-info h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: #fff;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.detail-info p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #d4d4d8;
+  margin: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Separadores súper finos */
+  padding-bottom: 14px;
+}
+
+.detail-info p:last-child {
+  border-bottom: none;
+}
+
+.detail-info strong {
+  color: #facc15; /* Dorado para las etiquetas */
+  font-weight: 600;
+  margin-right: 8px;
+}

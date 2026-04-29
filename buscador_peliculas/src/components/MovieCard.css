@@ -1,0 +1,64 @@
+.movie-card {
+  position: relative;
+  height: 280px; /* Altura mucho más razonable */
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+
+.movie-card:hover {
+  transform: scale(1.05) translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.6), 0 0 0 2px #facc15;
+}
+
+.movie-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
+  z-index: 1;
+}
+
+.movie-poster {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  transition: transform 0.5s ease;
+}
+
+.movie-card:hover .movie-poster {
+  transform: scale(1.1);
+}
+
+.movie-title {
+  position: absolute;
+  bottom: 32px; /* Un poco más abajo porque la tarjeta es más chica */
+  left: 15px;
+  right: 15px;
+  z-index: 2;
+  font-size: 1.1rem; /* Letra un toque más chica */
+  font-weight: 600;
+  margin: 0;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.movie-info {
+  position: absolute;
+  bottom: 12px;
+  left: 15px;
+  right: 15px;
+  z-index: 2;
+  font-size: 0.8rem;
+  color: #a1a1aa;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
