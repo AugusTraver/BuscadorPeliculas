@@ -17,7 +17,7 @@ const MovieDetail = ({ id, onBack }) => {
       if (resultado.respuesta && resultado.datos) {
         setDetail(resultado.datos);
       } else {
-        setError('No se pudo cargar el detalle de esta película.');
+        setError('No pudimos cargar los detalles, perdon compa');
       }
       
       setLoading(false);

@@ -26,15 +26,15 @@ function App() {
     if (resultado.respuesta && resultado.datos) {
       setMovies(resultado.datos);
     } else {
-      setError('No se encontraron resultados para tu búsqueda.');
+      setError('Busca bien salame');
     }
-    
+
     setLoading(false);
   };
 
   return (
     <div className="app-container">
-      <h1 className="app-title">Buscador de Películas</h1>
+      <h1 className="app-title">Busca una peli pibe</h1>
       
       {!selectedId && <SearchBar onSearch={handleSearch} />}
       
@@ -46,6 +46,8 @@ function App() {
       ) : (
         !loading && !error && <MovieList movies={movies} onSelectMovie={setSelectedId} />
       )}
+            <h1 className="app-atte">Atte la banda del morgan</h1>
+
     </div>
   );
 }
