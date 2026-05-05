@@ -15,14 +15,14 @@ function App() {
 
   const handleSearch = async (query) => {
     if (!query) return;
-    
+
     setLoading(true);
     setError('');
     setSelectedId(null);
     setMovies([]);
 
     const resultado = await OMDBSearchByPage(query, 1);
-    
+
     if (resultado.respuesta && resultado.datos) {
       setMovies(resultado.datos);
     } else {
@@ -35,9 +35,9 @@ function App() {
   return (
     <div className="app-container">
       <h1 className="app-title">Busca una peli pibe</h1>
-      
+
       {!selectedId && <SearchBar onSearch={handleSearch} />}
-      
+
       {loading && <Loader />}
       {error && <ErrorMessage message={error} />}
 
@@ -46,9 +46,10 @@ function App() {
       ) : (
         !loading && !error && <MovieList movies={movies} onSelectMovie={setSelectedId} />
       )}
-            <h1 className="app-atte">Atte la banda del morgan</h1>
-
-    </div>
+      <h1 className="app-atte">Atte la banda del morgan</h1>
+      <div class="contenedor">
+        <div class="morgan-img"></div>
+      </div>    </div>
   );
 }
 

@@ -37,7 +37,6 @@ body {
   font-size: 2rem;
   font-weight: 650;
   letter-spacing: 1px;
-  margin-bottom: 50px;
   background: linear-gradient(135deg, #FFD700 0%, #B8860B 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -47,7 +46,24 @@ body {
   line-height: 1.4;
   padding: 10px 0;
 }
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* lo manda arriba */
+  height: 100vh;
+  padding-top: 40px; /* lo baja un poquito desde arriba */
+}
+.morgan-img {
+  width: 68%;
+  height: 40vh;
 
+  background-image: url("MORGAN.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 10px;
+}
 /* AJUSTE RESPONSIVO PARA PANTALLAS PEQUEÑAS (Móviles) */
 /* Cuando la pantalla sea de menos de 768px, aplicamos estos cambios */
 @media (max-width: 768px) {
